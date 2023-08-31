@@ -1,0 +1,9 @@
+Package: mypkg
+Type: Package
+Title: Example minimal package
+Version: 1.0
+Date: 2023-08-31
+Author: Jan Gorecki
+Maintainer: Jan Gorecki <j.gorecki@wit.edu.pl>
+Description: Just an example of minimal package.
+License: GPL-3

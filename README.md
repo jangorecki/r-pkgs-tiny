@@ -72,7 +72,20 @@ Each exported function should have manual. Internal (non-exported) functions may
 \name{hello}
 \alias{hello}
 \title{ Prints 'world' string }
-...
+\description{
+  Description on hello function.
+}
+\usage{
+  hello()
+}
+\value{
+  Scalar character \code{"world"}.
+}
+\seealso{\code{\link{anError}}}
+\examples{
+hello()
+}
+\keyword{ data }
 ```
 
 It is easiest to re-use existing manual file as a template.
@@ -84,7 +97,7 @@ Our package is ready.
 We can build package tarballs (`tar.gz` file) which is the standard format to distribute R packages.
 
 ```sh
-R CMD build mypkg
+R CMD build .
 ```
 
 To check the package, we use tarballs rather than a path to directory.
