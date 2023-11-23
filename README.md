@@ -2,7 +2,7 @@
 
 ## Writing R package
 
-If you search online about writing R package, then it is easy to get impression that writing R package is a complex process, that requires multiple other packages to be installed and learnt.
+If you search online about writing R package, then it is easy to get impression that writing R package is a complex process, that requires multiple other packages to be installed and learned.
 
 Writing R packages is actually astounding straightforward and doesn't require any extra packages.
 All you need for a minimal package is:
@@ -103,18 +103,18 @@ R CMD build .
 To check the package, we use tarballs rather than a path to directory.
 
 ```sh
-R CMD check mypkg_1.0.tar.gz
+R CMD check mypkg_1.0.0.tar.gz
 ```
 
 To install package
 
 ```sh
-R CMD INSTALL mypkg_1.0.tar.gz
+R CMD INSTALL mypkg_1.0.0.tar.gz
 ```
 
 or from R
 ```R
-install.packages("mypkg_1.0.tar.gz")
+install.packages("mypkg_1.0.0.tar.gz")
 ```
 
 Note that this won't automatically install dependencies required by your package. On the machine where you are developing the package those dependencies are most likely already installed. If they aren't, and if there are many dependencies, or dependencies have their own dependencies, then an automatic way to install them may be needed. In base R this can be solved in a way described in ["Install a local R package with dependencies from CRAN mirror"](https://stackoverflow.com/a/74006901/2490497), otherwise third party packages can be used to achieve the same.
