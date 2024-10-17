@@ -140,6 +140,29 @@ stopifnot(
 )
 ```
 
+### `vignettes/` for extended documentation
+
+To render vignettes we need to use extra R package(s). The most lightweight out there is `litedown`.  
+
+`DESCRIPTION` needs to mention tools used for vignettes rendering:
+```dcf
+Suggests: litedown
+VignetteBuilder: litedown
+```
+
+Then `Rmd` files goes into `vignettes` directory.  
+Example `Rmd` file header:  
+```
+---
+title: Document title
+output:
+  litedown::html_format
+vignette: >
+  %\VignetteEngine{litedown::vignette}
+  %\VignetteIndexEntry{How to ...}
+---
+```
+
 ### `src/` for storing compiled code
 
 If you want to use compiled code like C/C++/Fortran then the code of those should go to `src` directory. In such case you also need to use `useDynLib` call in `NAMESPACE` file and an `src/init.c` file.
